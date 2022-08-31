@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:marketplace_app/constants.dart';
 import 'package:marketplace_app/routs.dart';
 import 'screens/splash/splash_screen.dart';
+import 'theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,19 +16,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'MarketPlace App',
-      theme: ThemeData(
-        fontFamily: 'Muli',
-        textTheme: const TextTheme(
-          bodyText1: TextStyle(color: kTextColor),
-          bodyText2: TextStyle(color: kTextColor),
-        ),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        scaffoldBackgroundColor: Colors.white,
-        primarySwatch: Colors.blue,
-      ),
-      //home:  SplashScreen(),
+      theme: theme(),
       initialRoute: SplashScreen.routeName,
       routes: routes,
     );
   }
 }
+
+

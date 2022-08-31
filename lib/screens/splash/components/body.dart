@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:marketplace_app/constants.dart';
+import 'package:marketplace_app/screens/sign_in_page/sign_in_page.dart';
 import 'package:marketplace_app/size_config.dart';
 
 import '../../../components/default_button.dart';
@@ -72,9 +73,13 @@ class _BodyState extends State<Body> {
                     ),
                     DefaultButton(
                       text: "Continue",
-                      press: () {},
+                      press: () {
+                        Navigator.pushNamed(context, SignInScreen.routeName);
+                      },
                     ),
-                    Spacer(),
+                    Spacer(
+                      flex: 3,
+                    ),
                   ],
                 ),
               ),
