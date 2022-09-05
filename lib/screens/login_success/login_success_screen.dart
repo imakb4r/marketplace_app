@@ -3,7 +3,7 @@ import 'package:marketplace_app/screens/login_success/components/body.dart';
 
 class LoginSuccessScreen extends StatelessWidget {
   const LoginSuccessScreen({Key? key}) : super(key: key);
-  static String routeName = 'login_success';
+  static String routeName = '/login_success';
 
   @override
   Widget build(BuildContext context) {
